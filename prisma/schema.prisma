@@ -1,0 +1,299 @@
+// Schema Siap Banjir — turunan dari Class Diagram.
+// Nama tabel & kolom snake_case di database, field camelCase di Prisma.
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  // Runtime (di Neon/Supabase: URL pooled / pgbouncer).
+  url        = env("DATABASE_URL")
+  // Migrasi (koneksi langsung). Lokal: sama dengan DATABASE_URL.
+  directUrl  = env("DIRECT_URL")
+  // pg_trgm: index pencarian nama wilayah (ILIKE '%...%').
+  extensions = [pg_trgm]
+}
+
+// Tingkat wilayah administrasi Kemendagri.
+enum TingkatWilayah {
+  PROVINSI
+  KABKOTA
+  KECAMATAN
+  DESA
+}
+
+// Enum level risiko. Diberi nama TingkatRisiko karena nama "LevelRisiko"
+// sudah dipakai oleh model (lihat docs/DECISIONS.md).
+enum TingkatRisiko {
+  RENDAH
+  SEDANG
+  TINGGI
+}
+
+enum StatusKirim {
+  PENDING
+  TERKIRIM
+  GAGAL
+}
+
+enum KategoriInformasi {
+  UMUM
+  RIWAYAT_KEJADIAN
+}
+
+// Kelompok rekomendasi di Detail Mitigasi (DECISIONS D-044). JIKA_BANJIR hanya untuk level TINGGI:
+// level risiko adalah potensi banjir, jadi langkah saat banjir ditampilkan terpisah.
+enum BagianRekomendasi {
+  SIAGA
+  JIKA_BANJIR
+}
+
+// Parameter turunan dari data Open-Meteo yang dibandingkan dengan AmbangRisiko.
+enum ParameterRisiko {
+  hujan_1jam
+  hujan_24jam
+  hujan_3hari
+  prakiraan_hujan_24jam
+  peluang_hujan_max
+}
+
+model Pengguna {
+  idPengguna        String   @id @default(cuid()) @map("id_pengguna")
+  wilayahPreferensi String?  @map("wilayah_preferensi")
+  tanggalDibuat     DateTime @default(now()) @map("tanggal_dibuat")
+
+  wilayah   Wilayah?    @relation(fields: [wilayahPreferensi], references: [idWilayah], onDelete: SetNull)
+  perangkat Perangkat[]
+
+  @@map("pengguna")
+}
+
+model Perangkat {
+  idPerangkat    String   @id @default(cuid()) @map("id_perangkat")
+  idPengguna     String   @map("id_pengguna")
+  jenisPerangkat String   @map("jenis_perangkat")
+  browser        String
+  deviceToken    String   @unique @map("device_token")
+  tanggalDaftar  DateTime @default(now()) @map("tanggal_daftar")
+
+  pengguna  Pengguna             @relation(fields: [idPengguna], references: [idPengguna], onDelete: Cascade)
+  langganan LanggananNotifikasi?
+
+  @@index([idPengguna])
+  @@map("perangkat")
+}
+
+model LanggananNotifikasi {
+  idLangganan      String        @id @default(cuid()) @map("id_langganan")
+  idPerangkat      String        @unique @map("id_perangkat")
+  idWilayah        String        @map("id_wilayah")
+  status           Boolean       @default(true)
+  // JSON Web Push: { endpoint, keys: { p256dh, auth } }
+  pushSubscription Json          @map("push_subscription")
+  // Salinan pushSubscription.endpoint agar bisa diberi constraint unik.
+  pushEndpoint     String        @unique @map("push_endpoint")
+  levelMinimum     TingkatRisiko @default(SEDANG) @map("level_minimum")
+  tanggalDaftar    DateTime      @default(now()) @map("tanggal_daftar")
+
+  perangkat  Perangkat    @relation(fields: [idPerangkat], references: [idPerangkat], onDelete: Cascade)
+  wilayah    Wilayah      @relation(fields: [idWilayah], references: [idWilayah], onDelete: Cascade)
+  notifikasi Notifikasi[]
+
+  @@index([idWilayah, status])
+  @@map("langganan_notifikasi")
+}
+
+model Notifikasi {
+  idNotifikasi  String      @id @default(cuid()) @map("id_notifikasi")
+  idLangganan   String      @map("id_langganan")
+  idLevelRisiko String      @map("id_level_risiko")
+  judul         String
+  pesan         String
+  waktuKirim    DateTime    @default(now()) @map("waktu_kirim")
+  statusKirim   StatusKirim @default(PENDING) @map("status_kirim")
+
+  langganan   LanggananNotifikasi @relation(fields: [idLangganan], references: [idLangganan], onDelete: Cascade)
+  levelRisiko LevelRisiko         @relation(fields: [idLevelRisiko], references: [idRisiko], onDelete: Cascade)
+
+  @@index([idLangganan, waktuKirim])
+  @@index([idLevelRisiko])
+  @@map("notifikasi")
+}
+
+model Wilayah {
+  // Kode Kemendagri bertitik: 36 · 36.71 · 36.71.01 · 36.71.01.1001 (dipakai di URL ?wilayah=).
+  idWilayah          String         @id @map("id_wilayah")
+  namaWilayah        String         @map("nama_wilayah")
+  level              TingkatWilayah
+  idInduk            String?        @map("id_induk")
+  // "Sukarasa, Tangerang, Kota Tangerang, Banten" untuk pencarian (index trigram).
+  namaLengkap        String         @map("nama_lengkap")
+  // Centroid polygon (cahyadsn/wilayah_boundaries).
+  koordinatLatitude  Float          @map("koordinat_latitude")
+  koordinatLongitude Float          @map("koordinat_longitude")
+  // true = koordinat induk dipakai karena data centroid tidak ada/tidak cocok.
+  koordinatPerkiraan Boolean        @default(false) @map("koordinat_perkiraan")
+  // Sel grid cuaca 0,1° ("-6.2,106.6"); diisi untuk desa/kelurahan.
+  kunciGrid          String?        @map("kunci_grid")
+  // false = kode tidak ada lagi di data Kemendagri terbaru (disembunyikan dari pemilih).
+  aktif              Boolean        @default(true)
+  deskripsi          String?
+
+  induk         Wilayah?              @relation("HierarkiWilayah", fields: [idInduk], references: [idWilayah], onDelete: Restrict)
+  anak          Wilayah[]             @relation("HierarkiWilayah")
+  levelRisiko   LevelRisiko[]
+  informasi     Informasi[]
+  ambangRisiko  AmbangRisiko[]
+  simulasiCuaca SimulasiCuaca[]
+  persiapanDini PersiapanDini[]
+  rekomendasi   Rekomendasi[]
+  pengguna      Pengguna[]
+  langganan     LanggananNotifikasi[]
+
+  @@index([idInduk, aktif])
+  @@index([level, koordinatLatitude, koordinatLongitude])
+  @@index([kunciGrid])
+  @@index([namaLengkap(ops: raw("gin_trgm_ops"))], type: Gin, map: "wilayah_nama_lengkap_trgm_idx")
+  @@map("wilayah")
+}
+
+/// Cache cuaca per sel grid 0,1° (bukan per wilayah): semua desa di sel yang sama
+/// memakai satu request Open-Meteo. Lihat docs/DECISIONS.md D-034.
+model DataCuaca {
+  idCuaca         String   @id @default(cuid()) @map("id_cuaca")
+  kunciGrid       String   @map("kunci_grid")
+  // Titik pusat sel grid yang diminta ke Open-Meteo.
+  gridLatitude    Float    @map("grid_latitude")
+  gridLongitude   Float    @map("grid_longitude")
+  curahHujan      Float    @map("curah_hujan")
+  suhu            Float
+  kelembapan      Float
+  // Kode cuaca WMO dari Open-Meteo (weather_code).
+  kondisiCuaca    Int      @map("kondisi_cuaca")
+  kecepatanAngin  Float    @map("kecepatan_angin")
+  waktuPengamatan DateTime @map("waktu_pengamatan")
+  // Waktu data diambil dari API; dipakai untuk cek umur cache 30 menit.
+  waktuAmbil      DateTime @default(now()) @map("waktu_ambil")
+  rawJson         Json     @map("raw_json")
+
+  levelRisiko LevelRisiko[]
+
+  @@index([kunciGrid, waktuAmbil])
+  // Hitung pemakaian kuota 24 jam & pembersihan data lama.
+  @@index([waktuAmbil])
+  @@map("data_cuaca")
+}
+
+model LevelRisiko {
+  idRisiko        String        @id @default(cuid()) @map("id_risiko")
+  idWilayah       String        @map("id_wilayah")
+  idCuaca         String        @map("id_cuaca")
+  level           TingkatRisiko
+  // 0–100, untuk gauge.
+  skorRisiko      Int           @map("skor_risiko")
+  deskripsi       String
+  // [{ parameter, nilai, level, skor, ambangKhusus, pemicu }] hasil semua parameter;
+  // pemicu = true untuk parameter yang menentukan level akhir.
+  parameterPemicu Json          @default("[]") @map("parameter_pemicu")
+  waktu           DateTime      @default(now())
+  /// true = dihitung dengan nilai hujan dari SimulasiCuaca (DECISIONS D-041): notifikasi berlabel
+  /// [SIMULASI], tidak ditulis ke riwayat, dan tidak dihitung anti-spam notifikasi asli.
+  simulasi        Boolean       @default(false)
+
+  wilayah    Wilayah      @relation(fields: [idWilayah], references: [idWilayah], onDelete: Cascade)
+  dataCuaca  DataCuaca    @relation(fields: [idCuaca], references: [idCuaca], onDelete: Cascade)
+  notifikasi Notifikasi[]
+
+  @@index([idWilayah, waktu])
+  @@index([idCuaca, idWilayah])
+  @@map("level_risiko")
+}
+
+/// Alat uji `npm run simulasi` (di luar UML, DECISIONS D-041): hujan 24 jam simulasi untuk wilayah
+/// ini dan semua desa/kelurahan di bawahnya. Ambang risiko tidak diubah.
+model SimulasiCuaca {
+  idWilayah   String        @id @map("id_wilayah")
+  // mm; dipakai sebagai hujan 24 jam terakhir (dan minimum akumulasi 3 hari).
+  hujan24Jam  Float         @map("hujan_24jam")
+  // Level yang dituju saat simulasi dibuat (informasi; level nyata dihitung dari ambang).
+  levelTujuan TingkatRisiko @map("level_tujuan")
+  mulai       DateTime      @default(now())
+
+  wilayah Wilayah @relation(fields: [idWilayah], references: [idWilayah], onDelete: Cascade)
+
+  @@map("simulasi_cuaca")
+}
+
+model AmbangRisiko {
+  idAmbang      String          @id @default(cuid()) @map("id_ambang")
+  // null = berlaku global.
+  idWilayah     String?         @map("id_wilayah")
+  parameter     ParameterRisiko
+  nilaiMinimum  Float           @map("nilai_minimum")
+  // null = tanpa batas atas.
+  nilaiMaksimum Float?          @map("nilai_maksimum")
+  levelRisiko   TingkatRisiko   @map("level_risiko")
+  keterangan    String?
+
+  wilayah Wilayah? @relation(fields: [idWilayah], references: [idWilayah], onDelete: Cascade)
+
+  @@index([idWilayah, parameter])
+  @@map("ambang_risiko")
+}
+
+model Informasi {
+  idInformasi String            @id @default(cuid()) @map("id_informasi")
+  idWilayah   String?           @map("id_wilayah")
+  judul       String
+  isi         String
+  kategori    KategoriInformasi
+  tanggal     DateTime          @default(now())
+  /// Rujukan asli (DECISIONS D-039). Wajib untuk riwayat kejadian dari seed.
+  sumberNama  String?           @map("sumber_nama")
+  sumberUrl   String?           @map("sumber_url")
+  /// Sumber tanggal kejadian bila tanggal itu tidak ada di sumber utama (D-059).
+  sumberTanggalNama String?     @map("sumber_tanggal_nama")
+  sumberTanggalUrl  String?     @map("sumber_tanggal_url")
+  /// true = `tanggal` adalah tanggal data ("Data per …"), bukan tanggal kejadian (D-059).
+  tanggalDataPer    Boolean     @default(false) @map("tanggal_data_per")
+
+  wilayah Wilayah? @relation(fields: [idWilayah], references: [idWilayah], onDelete: Cascade)
+
+  @@index([kategori, tanggal])
+  @@index([idWilayah])
+  @@map("informasi")
+}
+
+model PersiapanDini {
+  idPersiapan  String        @id @default(cuid()) @map("id_persiapan")
+  idWilayah    String?       @map("id_wilayah")
+  levelRisiko  TingkatRisiko @map("level_risiko")
+  isiPersiapan String        @map("isi_persiapan")
+  urutan       Int
+  tanggal      DateTime      @default(now())
+
+  wilayah Wilayah? @relation(fields: [idWilayah], references: [idWilayah], onDelete: Cascade)
+
+  @@index([levelRisiko, idWilayah])
+  @@map("persiapan_dini")
+}
+
+model Rekomendasi {
+  idRekomendasi  String            @id @default(cuid()) @map("id_rekomendasi")
+  idWilayah      String?           @map("id_wilayah")
+  levelRisiko    TingkatRisiko     @map("level_risiko")
+  isiRekomendasi String            @map("isi_rekomendasi")
+  urutan         Int
+  bagian         BagianRekomendasi @default(SIAGA)
+  /// Rujukan asli termasuk halaman, mis. "BNPB, Buku Saku ..., hal. 36" (D-044).
+  sumberNama     String?           @map("sumber_nama")
+  sumberUrl      String?           @map("sumber_url")
+  tanggal        DateTime          @default(now())
+
+  wilayah Wilayah? @relation(fields: [idWilayah], references: [idWilayah], onDelete: Cascade)
+
+  @@index([levelRisiko, idWilayah])
+  @@map("rekomendasi")
+}

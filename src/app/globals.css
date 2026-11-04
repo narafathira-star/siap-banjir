@@ -1,0 +1,249 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Warna level risiko. Selalu dipasangkan dengan teks + ikon, jangan warna saja. */
+  --color-risk-rendah: var(--risk-rendah);
+  --color-risk-rendah-foreground: var(--risk-rendah-foreground);
+  --color-risk-sedang: var(--risk-sedang);
+  --color-risk-sedang-foreground: var(--risk-sedang-foreground);
+  --color-risk-tinggi: var(--risk-tinggi);
+  --color-risk-tinggi-foreground: var(--risk-tinggi-foreground);
+  --color-risk-rendah-tint: var(--risk-rendah-tint);
+  --color-risk-rendah-garis: var(--risk-rendah-garis);
+  --color-risk-rendah-teks: var(--risk-rendah-teks);
+  --color-risk-sedang-tint: var(--risk-sedang-tint);
+  --color-risk-sedang-garis: var(--risk-sedang-garis);
+  --color-risk-sedang-teks: var(--risk-sedang-teks);
+  --color-risk-tinggi-tint: var(--risk-tinggi-tint);
+  --color-risk-tinggi-garis: var(--risk-tinggi-garis);
+  --color-risk-tinggi-teks: var(--risk-tinggi-teks);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-lembut: var(--primary-lembut);
+  --color-darurat: var(--darurat);
+  --color-darurat-foreground: var(--darurat-foreground);
+  --color-darurat-lembut: var(--darurat-lembut);
+  --color-darurat-teks: var(--darurat-teks);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Palet desain ulang (kanvas "Siap Banjir — Desain Ulang", D-046). */
+  --background: #f3f5f9;
+  --foreground: #0e1726;
+  --card: #ffffff;
+  --card-foreground: #0e1726;
+  --popover: #ffffff;
+  --popover-foreground: #0e1726;
+  /* Biru (air / kepercayaan), kontras dengan putih 7,6:1. */
+  --primary: #1742c9;
+  --primary-hover: #0f2f99;
+  --primary-foreground: #ffffff;
+  --primary-lembut: #e3eafd;
+  --secondary: #e3eafd;
+  --secondary-foreground: #0f2f99;
+  --muted: #e3e8ef;
+  --muted-foreground: #4a5568;
+  --accent: #e3eafd;
+  --accent-foreground: #0f2f99;
+  --destructive: #b4141c;
+  --border: #d5dce6;
+  --input: #9aa6b8;
+  --ring: #1742c9;
+  /* Tombol & kartu darurat. */
+  --darurat: #b4141c;
+  --darurat-foreground: #ffffff;
+  --darurat-lembut: #fde7e7;
+  --darurat-teks: #7a0a10;
+  /* Rendah = hijau, Sedang = kuning, Tinggi = merah; tint = latar, garis = border, teks = teks di atas tint. */
+  --risk-rendah: #0a6b31;
+  --risk-rendah-foreground: #ffffff;
+  --risk-rendah-tint: #e4f4ea;
+  --risk-rendah-garis: #0a6b31;
+  --risk-rendah-teks: #0a6b31;
+  --risk-sedang: #f5c400;
+  --risk-sedang-foreground: #1b1600;
+  --risk-sedang-tint: #fff6cf;
+  --risk-sedang-garis: #b98c00;
+  --risk-sedang-teks: #5a4700;
+  --risk-tinggi: #b4141c;
+  --risk-tinggi-foreground: #ffffff;
+  --risk-tinggi-tint: #fde7e7;
+  --risk-tinggi-garis: #b4141c;
+  --risk-tinggi-teks: #7a0a10;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.707 0.165 254.624);
+  --primary-foreground: oklch(0.205 0 0);
+  --risk-rendah: oklch(0.723 0.219 149.579);
+  --risk-rendah-foreground: oklch(0.205 0 0);
+  --risk-sedang: oklch(0.828 0.189 84.429);
+  --risk-sedang-foreground: oklch(0.205 0 0);
+  --risk-tinggi: oklch(0.704 0.191 22.216);
+  --risk-tinggi-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  /* Huruf dasar sedikit lebih besar (≈17px) agar mudah dibaca di HP. */
+  html {
+    font-size: 106.25%;
+    /* Scroll otomatis (anchor, fokus, scrollIntoView) tidak tertutup header sticky / bottom nav. */
+    scroll-padding-top: 5rem;
+    scroll-padding-bottom: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+/* Ilustrasi air Beranda (D-046): air naik sekali saat tampil, kilau permukaan, tetes hujan. */
+@keyframes sb-naik {
+  from {
+    transform: translateZ(0px);
+  }
+}
+@keyframes sb-tumbuh-h {
+  from {
+    height: 0px;
+  }
+}
+@keyframes sb-tumbuh-w {
+  from {
+    width: 0px;
+  }
+}
+@keyframes sb-kilau {
+  to {
+    background-position: 31.11px 0;
+  }
+}
+@keyframes sb-tetes {
+  from {
+    transform: translate(0px, -24px) rotate(11deg);
+  }
+  to {
+    transform: translate(-52px, 290px) rotate(11deg);
+  }
+}
+.sb-naik {
+  animation: sb-naik 3.2s cubic-bezier(0.22, 0.75, 0.25, 1) 0.3s both;
+}
+.sb-tumbuh-h {
+  animation: sb-tumbuh-h 3.2s cubic-bezier(0.22, 0.75, 0.25, 1) 0.3s both;
+}
+.sb-tumbuh-w {
+  animation: sb-tumbuh-w 3.2s cubic-bezier(0.22, 0.75, 0.25, 1) 0.3s both;
+}
+.sb-kilau {
+  animation: sb-kilau 3s linear infinite;
+}
+.sb-tetes {
+  animation-name: sb-tetes;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sb-naik,
+  .sb-tumbuh-h,
+  .sb-tumbuh-w,
+  .sb-kilau {
+    animation: none !important;
+  }
+  .sb-tetes {
+    display: none;
+  }
+}

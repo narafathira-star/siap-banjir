@@ -1,0 +1,1696 @@
+{
+  "sumber": {
+    "nama": "Portal Layanan Panggilan Darurat 112 — Kementerian Komunikasi dan Digital",
+    "url": "https://layanan112.komdigi.go.id/"
+  },
+  "diambilPada": "2026-09-27",
+  "keteranganStatus": {
+    "1": "Sudah Launching",
+    "2": "Uji Coba",
+    "3": "Verifikasi",
+    "4": "Dalam Pengajuan",
+    "5": "Belum Permohonan"
+  },
+  "daftar": [
+    {
+      "idWilayah": "11.04",
+      "namaPortal": "Kabupaten Aceh Tengah",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-11-22"
+    },
+    {
+      "idWilayah": "11.13",
+      "namaPortal": "Kabupaten Gayo Lues",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "11.15",
+      "namaPortal": "Kabupaten Nagan Raya",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "11.73",
+      "namaPortal": "Kota Lhokseumawe",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "12.03",
+      "namaPortal": "Kabupaten Tapanuli Selatan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-05-31"
+    },
+    {
+      "idWilayah": "12.04",
+      "namaPortal": "Kabupaten Nias",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "12.05",
+      "namaPortal": "Kabupaten Langkat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-10-27"
+    },
+    {
+      "idWilayah": "12.06",
+      "namaPortal": "Kabupaten Karo",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-06-21"
+    },
+    {
+      "idWilayah": "12.07",
+      "namaPortal": "Kabupaten Deliserdang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-05-15"
+    },
+    {
+      "idWilayah": "12.11",
+      "namaPortal": "Kabupaten Dairi",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-08-17"
+    },
+    {
+      "idWilayah": "12.12",
+      "namaPortal": "Kabupaten Toba Samosir",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "12.15",
+      "namaPortal": "Kabupaten Pakpak Bharat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-07-28"
+    },
+    {
+      "idWilayah": "12.16",
+      "namaPortal": "Kabupaten Humbang Hasundutan",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "12.20",
+      "namaPortal": "Kabupaten Padang Lawas Utara",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "12.71",
+      "namaPortal": "Kota Medan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-17"
+    },
+    {
+      "idWilayah": "12.73",
+      "namaPortal": "Kota Sibolga",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-11-12"
+    },
+    {
+      "idWilayah": "12.76",
+      "namaPortal": "Kota Tebing Tinggi",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-07-12"
+    },
+    {
+      "idWilayah": "12.77",
+      "namaPortal": "Kota Padang Sidempuan",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "13.02",
+      "namaPortal": "Kabupaten Solok",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "13.03",
+      "namaPortal": "Kabupaten Sijunjung",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-02-18"
+    },
+    {
+      "idWilayah": "13.05",
+      "namaPortal": "Kabupaten Padang Pariaman",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-08-15"
+    },
+    {
+      "idWilayah": "13.06",
+      "namaPortal": "Kabupaten Agam",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-08-17"
+    },
+    {
+      "idWilayah": "13.08",
+      "namaPortal": "Kabupaten Pasaman",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "13.10",
+      "namaPortal": "Kabupaten Dharmasraya",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-08-17"
+    },
+    {
+      "idWilayah": "13.12",
+      "namaPortal": "Kabupaten Pasaman Barat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-02-25"
+    },
+    {
+      "idWilayah": "13.71",
+      "namaPortal": "Kota Padang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2023-08-07"
+    },
+    {
+      "idWilayah": "13.72",
+      "namaPortal": "Kota Solok",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-09-29"
+    },
+    {
+      "idWilayah": "13.74",
+      "namaPortal": "Kota Padang Panjang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-04"
+    },
+    {
+      "idWilayah": "13.75",
+      "namaPortal": "Kota Bukittinggi",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-06-20"
+    },
+    {
+      "idWilayah": "14.01",
+      "namaPortal": "Kabupaten Kampar",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "14.03",
+      "namaPortal": "Kabupaten Bengkalis",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "14.04",
+      "namaPortal": "Kabupaten Indragiri Hilir",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "14.08",
+      "namaPortal": "Kabupaten Siak",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-02-11"
+    },
+    {
+      "idWilayah": "14.71",
+      "namaPortal": "Kota Pekanbaru",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-11-29"
+    },
+    {
+      "idWilayah": "14.72",
+      "namaPortal": "Kota Dumai",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-04-27"
+    },
+    {
+      "idWilayah": "15.02",
+      "namaPortal": "Kabupaten Merangin",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "15.05",
+      "namaPortal": "Kabupaten Muaro Jambi",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "15.06",
+      "namaPortal": "Kabupaten Tanjung Jabung Barat",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "15.07",
+      "namaPortal": "Kabupaten Tanjung Jabung Timur",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "15.71",
+      "namaPortal": "Kota Jambi",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-08-17"
+    },
+    {
+      "idWilayah": "16.02",
+      "namaPortal": "Kabupaten Ogan Komering Ilir",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2023-10-18"
+    },
+    {
+      "idWilayah": "16.03",
+      "namaPortal": "Kabupaten Muara Enim",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "16.04",
+      "namaPortal": "Kabupaten Lahat",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "16.06",
+      "namaPortal": "Kabupaten Musi Banyuasin",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-10-25"
+    },
+    {
+      "idWilayah": "16.07",
+      "namaPortal": "Kabupaten Banyuasin",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-11-19"
+    },
+    {
+      "idWilayah": "16.10",
+      "namaPortal": "Kabupaten Ogan Ilir",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-01-08"
+    },
+    {
+      "idWilayah": "16.11",
+      "namaPortal": "Kabupaten Empat Lawang",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "16.12",
+      "namaPortal": "Kabupaten Penukal Abab Lematang Ilir",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-12-10"
+    },
+    {
+      "idWilayah": "16.13",
+      "namaPortal": "Kabupaten Musi Rawas Utara",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "16.71",
+      "namaPortal": "Kota Palembang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-07-05"
+    },
+    {
+      "idWilayah": "16.72",
+      "namaPortal": "Kota Pagar Alam",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2023-08-17"
+    },
+    {
+      "idWilayah": "17.01",
+      "namaPortal": "Kabupaten Bengkulu Selatan",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "17.04",
+      "namaPortal": "Kabupaten Kaur",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-10-25"
+    },
+    {
+      "idWilayah": "17.05",
+      "namaPortal": "Kabupaten Seluma",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-05-23"
+    },
+    {
+      "idWilayah": "17.06",
+      "namaPortal": "Kabupaten Muko-Muko",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "17.07",
+      "namaPortal": "Kabupaten Lebong",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "17.09",
+      "namaPortal": "Kabupaten Bengkulu Tengah",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "17.71",
+      "namaPortal": "Kota Bengkulu",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-05-18"
+    },
+    {
+      "idWilayah": "18.02",
+      "namaPortal": "Kabupaten Lampung Tengah",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "18.04",
+      "namaPortal": "Kabupaten Lampung Barat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-09-19"
+    },
+    {
+      "idWilayah": "18.06",
+      "namaPortal": "Kabupaten Tanggamus",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "18.07",
+      "namaPortal": "Kabupaten Lampung Timur",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "18.08",
+      "namaPortal": "Kabupaten Way Kanan",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "18.11",
+      "namaPortal": "Kabupaten Mesuji",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-07-29"
+    },
+    {
+      "idWilayah": "18.12",
+      "namaPortal": "Kabupaten Tulang Bawang Barat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-08-17"
+    },
+    {
+      "idWilayah": "18.13",
+      "namaPortal": "Kabupaten Pesisir Barat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2023-08-15"
+    },
+    {
+      "idWilayah": "18.71",
+      "namaPortal": "Kota Bandarlampung",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "18.72",
+      "namaPortal": "Kota Metro",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2023-06-09"
+    },
+    {
+      "idWilayah": "19.71",
+      "namaPortal": "Kota Pangkalpinang",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "21.71",
+      "namaPortal": "Kota Batam",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "31.01",
+      "namaPortal": "Kabupaten Kepulauan Seribu",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-02-11"
+    },
+    {
+      "idWilayah": "31.71",
+      "namaPortal": "Kota Jakarta Pusat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-02-11"
+    },
+    {
+      "idWilayah": "31.72",
+      "namaPortal": "Kota Jakarta Utara",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-02-11"
+    },
+    {
+      "idWilayah": "31.73",
+      "namaPortal": "Kota Jakarta Barat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-02-11"
+    },
+    {
+      "idWilayah": "31.74",
+      "namaPortal": "Kota Jakarta Selatan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-02-11"
+    },
+    {
+      "idWilayah": "31.75",
+      "namaPortal": "Kota Jakarta Timur",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-02-11"
+    },
+    {
+      "idWilayah": "32.01",
+      "namaPortal": "Kabupaten Bogor",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-17"
+    },
+    {
+      "idWilayah": "32.03",
+      "namaPortal": "Kabupaten Cianjur",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "32.04",
+      "namaPortal": "Kabupaten Bandung",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "32.07",
+      "namaPortal": "Kabupaten Ciamis",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "32.08",
+      "namaPortal": "Kabupaten Kuningan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-06-14"
+    },
+    {
+      "idWilayah": "32.09",
+      "namaPortal": "Kabupaten Cirebon",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "32.10",
+      "namaPortal": "Kabupaten Majalengka",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-03-27"
+    },
+    {
+      "idWilayah": "32.11",
+      "namaPortal": "Kabupaten Sumedang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-04-04"
+    },
+    {
+      "idWilayah": "32.13",
+      "namaPortal": "Kabupaten Subang",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "32.14",
+      "namaPortal": "Kabupaten Purwakarta",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-08-09"
+    },
+    {
+      "idWilayah": "32.16",
+      "namaPortal": "Kabupaten Bekasi",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-02-25"
+    },
+    {
+      "idWilayah": "32.18",
+      "namaPortal": "Kabupaten Pangandaran",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "32.71",
+      "namaPortal": "Kota Bogor",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "32.73",
+      "namaPortal": "Kota Bandung",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "32.74",
+      "namaPortal": "Kota Cirebon",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-10-28"
+    },
+    {
+      "idWilayah": "32.75",
+      "namaPortal": "Kota Bekasi",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "32.76",
+      "namaPortal": "Kota Depok",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-13"
+    },
+    {
+      "idWilayah": "32.77",
+      "namaPortal": "Kota Cimahi",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "32.78",
+      "namaPortal": "Kota Tasikmalaya",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-03-19"
+    },
+    {
+      "idWilayah": "33.01",
+      "namaPortal": "Kabupaten Cilacap",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "33.06",
+      "namaPortal": "Kabupaten Purworejo",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-10-04"
+    },
+    {
+      "idWilayah": "33.07",
+      "namaPortal": "Kabupaten Wonosobo",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-08-17"
+    },
+    {
+      "idWilayah": "33.08",
+      "namaPortal": "Kabupaten Magelang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-17"
+    },
+    {
+      "idWilayah": "33.15",
+      "namaPortal": "Kabupaten Grobogan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-01-31"
+    },
+    {
+      "idWilayah": "33.19",
+      "namaPortal": "Kabupaten Kudus",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-04-11"
+    },
+    {
+      "idWilayah": "33.20",
+      "namaPortal": "Kabupaten Jepara",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-05-19"
+    },
+    {
+      "idWilayah": "33.21",
+      "namaPortal": "Kabupaten Demak",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-17"
+    },
+    {
+      "idWilayah": "33.22",
+      "namaPortal": "Kabupaten Semarang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-08-24"
+    },
+    {
+      "idWilayah": "33.24",
+      "namaPortal": "Kabupaten Kendal",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "33.25",
+      "namaPortal": "Kabupaten Batang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-17"
+    },
+    {
+      "idWilayah": "33.27",
+      "namaPortal": "Kabupaten Pemalang",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "33.28",
+      "namaPortal": "Kabupaten Tegal",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-08-17"
+    },
+    {
+      "idWilayah": "33.29",
+      "namaPortal": "Kabupaten Brebes",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "33.71",
+      "namaPortal": "Kota Magelang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-11-25"
+    },
+    {
+      "idWilayah": "33.72",
+      "namaPortal": "Kota Surakarta",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "33.74",
+      "namaPortal": "Kota Semarang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-05-02"
+    },
+    {
+      "idWilayah": "33.75",
+      "namaPortal": "Kota Pekalongan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-11-28"
+    },
+    {
+      "idWilayah": "34.02",
+      "namaPortal": "Kabupaten Bantul",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-11-18"
+    },
+    {
+      "idWilayah": "34.04",
+      "namaPortal": "Kabupaten Sleman",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-02-26"
+    },
+    {
+      "idWilayah": "35.05",
+      "namaPortal": "Kabupaten Blitar",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-16"
+    },
+    {
+      "idWilayah": "35.07",
+      "namaPortal": "Kabupaten Malang",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "35.09",
+      "namaPortal": "Kabupaten Jember",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "35.10",
+      "namaPortal": "Kabupaten Banyuwangi",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-12-22"
+    },
+    {
+      "idWilayah": "35.12",
+      "namaPortal": "Kabupaten Situbondo",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "35.13",
+      "namaPortal": "Kabupaten Probolinggo",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-10-07"
+    },
+    {
+      "idWilayah": "35.14",
+      "namaPortal": "Kabupaten Pasuruan",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "35.15",
+      "namaPortal": "Kabupaten Sidoarjo",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-06-20"
+    },
+    {
+      "idWilayah": "35.16",
+      "namaPortal": "Kabupaten Mojokerto",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-03-29"
+    },
+    {
+      "idWilayah": "35.17",
+      "namaPortal": "Kabupaten Jombang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-17"
+    },
+    {
+      "idWilayah": "35.18",
+      "namaPortal": "Kabupaten Nganjuk",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "35.21",
+      "namaPortal": "Kabupaten Ngawi",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "35.25",
+      "namaPortal": "Kabupaten Gresik",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-04-01"
+    },
+    {
+      "idWilayah": "35.27",
+      "namaPortal": "Kabupaten Sampang",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "35.29",
+      "namaPortal": "Kabupaten Sumenep",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-08-17"
+    },
+    {
+      "idWilayah": "35.71",
+      "namaPortal": "Kota Kediri",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "35.72",
+      "namaPortal": "Kota Blitar",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-07-12"
+    },
+    {
+      "idWilayah": "35.73",
+      "namaPortal": "Kota Malang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-17"
+    },
+    {
+      "idWilayah": "35.74",
+      "namaPortal": "Kota Probolinggo",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-03-06"
+    },
+    {
+      "idWilayah": "35.75",
+      "namaPortal": "Kota Pasuruan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-02-14"
+    },
+    {
+      "idWilayah": "35.76",
+      "namaPortal": "Kota Mojokerto",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-12-16"
+    },
+    {
+      "idWilayah": "35.77",
+      "namaPortal": "Kota Madiun",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-12-26"
+    },
+    {
+      "idWilayah": "35.78",
+      "namaPortal": "Kota Surabaya",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "35.79",
+      "namaPortal": "Kota Batu",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "36.01",
+      "namaPortal": "Kabupaten Pandeglang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-04-01"
+    },
+    {
+      "idWilayah": "36.02",
+      "namaPortal": "Kabupaten Lebak",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-12-02"
+    },
+    {
+      "idWilayah": "36.03",
+      "namaPortal": "Kabupaten Tangerang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-04-12"
+    },
+    {
+      "idWilayah": "36.04",
+      "namaPortal": "Kabupaten Serang",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "36.71",
+      "namaPortal": "Kota Tangerang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "36.72",
+      "namaPortal": "Kota Cilegon",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-04-27"
+    },
+    {
+      "idWilayah": "36.73",
+      "namaPortal": "Kota Serang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-02-11"
+    },
+    {
+      "idWilayah": "36.74",
+      "namaPortal": "Kota Tangerang Selatan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-12-11"
+    },
+    {
+      "idWilayah": "51.01",
+      "namaPortal": "Kabupaten Jembrana",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "51.03",
+      "namaPortal": "Kabupaten Badung",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-11-16"
+    },
+    {
+      "idWilayah": "51.04",
+      "namaPortal": "Kabupaten Gianyar",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "51.05",
+      "namaPortal": "Kabupaten Klungkung",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "51.06",
+      "namaPortal": "Kabupaten Bangli",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "51.07",
+      "namaPortal": "Kabupaten Karangasem",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "51.71",
+      "namaPortal": "Kota Denpasar",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "52.02",
+      "namaPortal": "Kabupaten Lombok Tengah",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-02-18"
+    },
+    {
+      "idWilayah": "52.04",
+      "namaPortal": "Kabupaten Sumbawa",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "52.71",
+      "namaPortal": "Kota Mataram",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "52.72",
+      "namaPortal": "Kota Bima",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2018-12-06"
+    },
+    {
+      "idWilayah": "53.01",
+      "namaPortal": "Kabupaten Kupang",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "53.03",
+      "namaPortal": "Kabupaten Timor Tengah Utara",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "53.71",
+      "namaPortal": "Kota Kupang",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "61.04",
+      "namaPortal": "Kabupaten Ketapang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-09-30"
+    },
+    {
+      "idWilayah": "61.71",
+      "namaPortal": "Kota Pontianak",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "61.72",
+      "namaPortal": "Kota Singkawang",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "62.02",
+      "namaPortal": "Kabupaten Kotawaringin Timur",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "62.04",
+      "namaPortal": "Kabupaten Barito Selatan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-12-02"
+    },
+    {
+      "idWilayah": "62.06",
+      "namaPortal": "Kabupaten Katingan",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "62.09",
+      "namaPortal": "Kabupaten Lamandau",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-03-08"
+    },
+    {
+      "idWilayah": "62.71",
+      "namaPortal": "Kota Palangkaraya",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-08-18"
+    },
+    {
+      "idWilayah": "63.01",
+      "namaPortal": "Kabupaten Tanah Laut",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "63.03",
+      "namaPortal": "Kabupaten Banjar",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-31"
+    },
+    {
+      "idWilayah": "63.04",
+      "namaPortal": "Kabupaten Baritokuala",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-02-10"
+    },
+    {
+      "idWilayah": "63.07",
+      "namaPortal": "Kabupaten Hulu Sungai Tengah",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "63.10",
+      "namaPortal": "Kabupaten Tanahbumbu",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "63.11",
+      "namaPortal": "Kabupaten Balangan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-11-18"
+    },
+    {
+      "idWilayah": "63.71",
+      "namaPortal": "Kota Banjarmasin",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "63.72",
+      "namaPortal": "Kota Banjarbaru",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-08-20"
+    },
+    {
+      "idWilayah": "64.01",
+      "namaPortal": "Kabupaten Paser",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2023-12-27"
+    },
+    {
+      "idWilayah": "64.02",
+      "namaPortal": "Kabupaten Kutai Kartanegara",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "64.03",
+      "namaPortal": "Kabupaten Berau",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "64.07",
+      "namaPortal": "Kabupaten Kutai Barat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-08-13"
+    },
+    {
+      "idWilayah": "64.08",
+      "namaPortal": "Kabupaten Kutai Timur",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-12-22"
+    },
+    {
+      "idWilayah": "64.09",
+      "namaPortal": "Kabupaten Penajam Paser Utara",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-05-06"
+    },
+    {
+      "idWilayah": "64.71",
+      "namaPortal": "Kota Balikpapan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "64.72",
+      "namaPortal": "Kota Samarinda",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-10-15"
+    },
+    {
+      "idWilayah": "64.74",
+      "namaPortal": "Kota Bontang",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-08-25"
+    },
+    {
+      "idWilayah": "65.03",
+      "namaPortal": "Kabupaten Nunukan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-03-06"
+    },
+    {
+      "idWilayah": "65.71",
+      "namaPortal": "Kota Tarakan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-09"
+    },
+    {
+      "idWilayah": "71.05",
+      "namaPortal": "Kabupaten Minahasa Selatan",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "71.06",
+      "namaPortal": "Kabupaten Minahasa Utara",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2023-05-22"
+    },
+    {
+      "idWilayah": "71.07",
+      "namaPortal": "Kabupaten Minahasa Tenggara",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "71.08",
+      "namaPortal": "Kabupaten Bolaang Mongondow Utara",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "71.10",
+      "namaPortal": "Kabupaten Bolaang Mongondow Timur",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "71.71",
+      "namaPortal": "Kota Manado",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2017-12-06"
+    },
+    {
+      "idWilayah": "71.72",
+      "namaPortal": "Kota Bitung",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-10-11"
+    },
+    {
+      "idWilayah": "71.73",
+      "namaPortal": "Kota Tomohon",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2019-02-20"
+    },
+    {
+      "idWilayah": "71.74",
+      "namaPortal": "Kota Kotamobagu",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2023-12-19"
+    },
+    {
+      "idWilayah": "72.01",
+      "namaPortal": "Kabupaten Banggai",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-07-08"
+    },
+    {
+      "idWilayah": "72.03",
+      "namaPortal": "Kabupaten Donggala",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-08-12"
+    },
+    {
+      "idWilayah": "72.05",
+      "namaPortal": "Kabupaten Buol",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-02-23"
+    },
+    {
+      "idWilayah": "72.06",
+      "namaPortal": "Kabupaten Morowali",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "72.07",
+      "namaPortal": "Kabupaten Banggai Kepulauan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-11-03"
+    },
+    {
+      "idWilayah": "72.08",
+      "namaPortal": "Kabupaten Parigimoutong",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-08-17"
+    },
+    {
+      "idWilayah": "72.11",
+      "namaPortal": "Kabupaten Banggai Laut",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "72.71",
+      "namaPortal": "Kota Palu",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.01",
+      "namaPortal": "Kabupaten Kepulauan Selayar",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.02",
+      "namaPortal": "Kabupaten Bulukumba",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-10-25"
+    },
+    {
+      "idWilayah": "73.04",
+      "namaPortal": "Kabupaten Jeneponto",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.05",
+      "namaPortal": "Kabupaten Takalar",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-02-10"
+    },
+    {
+      "idWilayah": "73.06",
+      "namaPortal": "Kabupaten Gowa",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.09",
+      "namaPortal": "Kabupaten Maros",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.11",
+      "namaPortal": "Kabupaten Barru",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-01-27"
+    },
+    {
+      "idWilayah": "73.13",
+      "namaPortal": "Kabupaten Wajo",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2021-02-11"
+    },
+    {
+      "idWilayah": "73.18",
+      "namaPortal": "Kabupaten Tana Toraja",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.22",
+      "namaPortal": "Kabupaten Luwu Utara",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.24",
+      "namaPortal": "Kabupaten Luwu Timur",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.26",
+      "namaPortal": "Kabupaten Toraja Utara",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "73.71",
+      "namaPortal": "Kota Makassar",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2016-12-01"
+    },
+    {
+      "idWilayah": "73.72",
+      "namaPortal": "Kota Pare-Pare",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-02-18"
+    },
+    {
+      "idWilayah": "74.01",
+      "namaPortal": "Kabupaten Kolaka",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2020-03-27"
+    },
+    {
+      "idWilayah": "74.02",
+      "namaPortal": "Kabupaten Konawe",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-03-03"
+    },
+    {
+      "idWilayah": "74.03",
+      "namaPortal": "Kabupaten Muna",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-11-30"
+    },
+    {
+      "idWilayah": "74.05",
+      "namaPortal": "Kabupaten Konawe Selatan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-12-15"
+    },
+    {
+      "idWilayah": "74.06",
+      "namaPortal": "Kabupaten Bombana",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-11-18"
+    },
+    {
+      "idWilayah": "74.07",
+      "namaPortal": "Kabupaten Wakatobi",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-10-03"
+    },
+    {
+      "idWilayah": "74.09",
+      "namaPortal": "Kabupaten Konawe Utara",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-02-10"
+    },
+    {
+      "idWilayah": "74.13",
+      "namaPortal": "Kabupaten Muna Barat",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "74.14",
+      "namaPortal": "Kabupaten Buton Tengah",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "74.15",
+      "namaPortal": "Kabupaten Buton Selatan",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "74.71",
+      "namaPortal": "Kota Kendari",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "75.01",
+      "namaPortal": "Kabupaten Gorontalo",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2022-09-07"
+    },
+    {
+      "idWilayah": "75.02",
+      "namaPortal": "Kabupaten Boalemo",
+      "status": 4,
+      "statusLabel": "Dalam Pengajuan",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "75.03",
+      "namaPortal": "Kabupaten Bone Bolango",
+      "status": 3,
+      "statusLabel": "Verifikasi",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "75.04",
+      "namaPortal": "Kabupaten Pahuwato",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-02-25"
+    },
+    {
+      "idWilayah": "81.05",
+      "namaPortal": "Kabupaten Seram Bagian Timur",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-02-20"
+    },
+    {
+      "idWilayah": "81.71",
+      "namaPortal": "Kota Ambon",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "82.03",
+      "namaPortal": "Kabupaten Halmahera Utara",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2026-02-20"
+    },
+    {
+      "idWilayah": "82.04",
+      "namaPortal": "Kabupaten Halmahera Selatan",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2024-08-17"
+    },
+    {
+      "idWilayah": "91.71",
+      "namaPortal": "Kota Jayapura",
+      "status": 2,
+      "statusLabel": "Uji Coba",
+      "tanggalLaunching": null
+    },
+    {
+      "idWilayah": "96.03",
+      "namaPortal": "Kabupaten Raja Ampat",
+      "status": 1,
+      "statusLabel": "Sudah Launching",
+      "tanggalLaunching": "2025-08-17"
+    }
+  ]
+}

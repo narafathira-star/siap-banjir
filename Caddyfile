@@ -1,0 +1,21 @@
+# Reverse proxy HTTPS untuk Siap Banjir (aspek Confidentiality: data terenkripsi saat transit).
+# Akses: https://localhost:8443
+#
+# `tls internal` = Caddy membuat sertifikat dari CA lokalnya sendiri (cocok untuk pengembangan).
+# Untuk server sungguhan, ganti `localhost` dengan nama domain (mis. siapbanjir.example.id);
+# Caddy lalu mengurus sertifikat Let's Encrypt secara otomatis.
+localhost {
+	tls internal
+	encode zstd gzip
+
+	header {
+		-Server
+		# HSTS: AKTIFKAN hanya di domain sungguhan. Di `localhost` header ini membuat browser
+		# memaksa HTTPS untuk SEMUA port localhost (termasuk http://localhost:3000) sehingga rusak.
+		# Strict-Transport-Security "max-age=31536000; includeSubDomains"
+	}
+
+	# Caddy menimpa X-Forwarded-For dengan IP klien asli, jadi pembatas request
+	# di aplikasi (ipKlien) tidak bisa dikelabui dengan header palsu dari luar.
+	reverse_proxy app:3000
+}

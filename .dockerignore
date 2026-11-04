@@ -1,0 +1,28 @@
+node_modules
+.next
+.next-*
+out
+build
+coverage
+.git
+.github
+.vercel
+.cache
+test-results
+playwright-report
+*.tsbuildinfo
+npm-debug.log*
+
+# Rahasia tidak boleh masuk image; dibaca compose saat runtime
+.env
+.env.*
+!.env.example
+
+# Berkas Docker sendiri
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Hasil backup database
+backups
+Caddyfile

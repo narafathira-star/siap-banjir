@@ -1,0 +1,24 @@
+{
+  "name": "Siap Banjir",
+  "short_name": "Siap Banjir",
+  "description": "Pantau risiko banjir dan bersiap lebih dini. Peringatan dini berbasis data cuaca Open-Meteo.",
+  "lang": "id",
+  "dir": "ltr",
+  "id": "/",
+  "start_url": "/?sumber=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4ed8",
+  "categories": ["weather", "utilities"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Detail Risiko", "url": "/risiko", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Prakiraan Cuaca", "url": "/cuaca", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

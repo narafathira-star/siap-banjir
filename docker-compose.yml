@@ -1,0 +1,141 @@
+# Siap Banjir - PostgreSQL 17 + aplikasi + cron + backup (versi dengan fitur Availability).
+# Jalankan dari folder proyek (sejajar dengan package.json), dengan berkas `.env` sudah diisi.
+name: siap-banjir
+
+# Batas ukuran log agar disk tidak penuh oleh log (log tak terbatas = risiko availability).
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: siapbanjir
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-siapbanjir}
+      POSTGRES_DB: siapbanjir
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      # Hanya bisa diakses dari komputer sendiri (127.0.0.1), bukan dari jaringan.
+      - "127.0.0.1:${DB_PORT:-5433}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U siapbanjir -d siapbanjir"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    mem_limit: 512m
+    logging: *logging
+
+  app:
+    image: siap-banjir:latest
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_VAPID_PUBLIC_KEY: ${NEXT_PUBLIC_VAPID_PUBLIC_KEY:-}
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://siapbanjir:${POSTGRES_PASSWORD:-siapbanjir}@db:5432/siapbanjir?schema=public
+      DIRECT_URL: postgresql://siapbanjir:${POSTGRES_PASSWORD:-siapbanjir}@db:5432/siapbanjir?schema=public
+    command: ["sh", "-c", "npx prisma migrate deploy && npm start"]
+    ports:
+      # Hanya bisa diakses dari komputer ini. Akses publik lewat proxy HTTPS (service `caddy`).
+      - "127.0.0.1:3000:3000"
+    healthcheck:
+      # /api/health memeriksa server + koneksi database. 503 = tidak sehat.
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    # Satu proses yang bocor memori/CPU tidak boleh menjatuhkan seluruh mesin.
+    mem_limit: 1g
+    cpus: 1.5
+    logging: *logging
+
+  # Reverse proxy HTTPS. Akses aplikasi lewat https://localhost:8443
+  # (browser akan memperingatkan sertifikat sampai CA lokal Caddy dipercaya, lihat panduan).
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    mem_limit: 128m
+    logging: *logging
+
+  # Pengganti Vercel Cron. Aktifkan:  docker compose --profile cron up -d
+  cron:
+    image: siap-banjir:latest
+    profiles: ["cron"]
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      NEXT_PUBLIC_APP_URL: http://app:3000
+    command: ["npx", "tsx", "scripts/cron-lokal.ts"]
+    mem_limit: 256m
+    logging: *logging
+
+  # Backup otomatis harian ke folder ./backups, simpan 7 hari terakhir.
+  # Aktifkan:  docker compose --profile backup up -d
+  backup:
+    image: postgres:17
+    profiles: ["backup"]
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PGPASSWORD: ${POSTGRES_PASSWORD:-siapbanjir}
+    volumes:
+      - ./backups:/backups
+    # Integrity: tiap backup diverifikasi (pg_restore --list membaca seluruh arsip) lalu diberi
+    # checksum SHA-256. File yang gagal diverifikasi dihapus, bukan disimpan sebagai backup palsu.
+    entrypoint:
+      - sh
+      - -c
+      - |
+        while true; do
+          F=/backups/siapbanjir_$$(date +%Y%m%d_%H%M).dump
+          if pg_dump -h db -U siapbanjir -Fc siapbanjir > $$F && pg_restore --list $$F > /dev/null; then
+            (cd /backups && sha256sum $$(basename $$F) > $$(basename $$F).sha256)
+            echo "backup OK: $$F"
+          else
+            rm -f $$F
+            echo "backup GAGAL diverifikasi, file dibuang" >&2
+          fi
+          find /backups -name 'siapbanjir_*' -mtime +7 -delete
+          sleep 86400
+        done
+    mem_limit: 256m
+    logging: *logging
+
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:

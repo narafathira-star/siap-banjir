@@ -1,0 +1,23 @@
+# Alternatif Vercel Cron: panggil endpoint cron setiap 30 menit.
+# Atur secret repo: APP_URL (misal https://siap-banjir.vercel.app) dan CRON_SECRET.
+# Catatan: jadwal GitHub Actions bisa terlambat beberapa menit saat antrean ramai.
+name: Update cuaca & risiko
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  update-weather:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Panggil /api/cron/update-weather
+        env:
+          APP_URL: ${{ secrets.APP_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl --fail-with-body --silent --show-error --max-time 120 \
+            -H "Authorization: Bearer ${CRON_SECRET}" \
+            "${APP_URL}/api/cron/update-weather"

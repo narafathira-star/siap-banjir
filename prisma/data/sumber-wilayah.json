@@ -1,0 +1,66 @@
+{
+  "kodeDanNama": {
+    "repo": "cahyadsn/wilayah",
+    "sha": "55a496d3662bf173a65d6860f75ed6be625f2430",
+    "file": "db/wilayah.sql",
+    "lisensi": "MIT",
+    "dasarHukum": "Kepmendagri No. 300.2.2-2430 Tahun 2025"
+  },
+  "koordinat": {
+    "repo": "cahyadsn/wilayah_boundaries",
+    "sha": "3c5a7960f4d227a38489094d84252bdbb3f978a5",
+    "lisensi": "MIT",
+    "metode": "centroid polygon"
+  },
+  "dibuat": "2026-09-25T08:26:28.569Z",
+  "ringkasan": [
+    {
+      "level": "PROVINSI",
+      "jumlah": 38,
+      "perkiraan": 0,
+      "sama": 38,
+      "ejaan": 0,
+      "berbeda": 0,
+      "tanpa-data": 0,
+      "koordinat-kosong": 0,
+      "di-luar-indonesia": 0,
+      "jauh-dari-induk": 0
+    },
+    {
+      "level": "KABKOTA",
+      "jumlah": 514,
+      "perkiraan": 0,
+      "sama": 514,
+      "ejaan": 0,
+      "berbeda": 0,
+      "tanpa-data": 0,
+      "koordinat-kosong": 0,
+      "di-luar-indonesia": 0,
+      "jauh-dari-induk": 0
+    },
+    {
+      "level": "KECAMATAN",
+      "jumlah": 7285,
+      "perkiraan": 0,
+      "sama": 7276,
+      "ejaan": 3,
+      "berbeda": 0,
+      "tanpa-data": 0,
+      "koordinat-kosong": 0,
+      "di-luar-indonesia": 0,
+      "jauh-dari-induk": 6
+    },
+    {
+      "level": "DESA",
+      "jumlah": 83762,
+      "perkiraan": 359,
+      "sama": 83368,
+      "ejaan": 16,
+      "berbeda": 0,
+      "tanpa-data": 359,
+      "koordinat-kosong": 0,
+      "di-luar-indonesia": 0,
+      "jauh-dari-induk": 19
+    }
+  ]
+}
