@@ -7,7 +7,7 @@
  *  - /_next/static/*: cache-first (nama file berisi hash, tidak pernah berubah).
  *  - API & lainnya: tidak di-cache oleh SW (data risiko harus segar).
  * Mode pengembangan (sw.js?dev=1) tidak memakai cache agar hot reload tidak terganggu.
- *  - Navigasi halaman: network-first; salinan terakhir disimpan, dipakai saat offline; jika belum pernah dibuka 
+ *  Halaman yang disimpan dibatasi MAKS_HALAMAN (30) agar memori perangkat tidak penuh.
  */
 
 const VERSI = "v1";
