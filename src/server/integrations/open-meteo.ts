@@ -21,10 +21,10 @@ export const openMeteoResponseSchema = z.object({
     time: z.string(),
     interval: z.number(),
     temperature_2m: z.number(),
-    relative_humidity_2m: z.number(),
-    precipitation: z.number(),
+    relative_humidity_2m: z.number().min(0).max(100),
+    precipitation: z.number().min(0),
     weather_code: z.number().int(),
-    wind_speed_10m: z.number(),
+    wind_speed_10m: z.number().min(0),
   }),
   hourly: z.object({
     time: z.array(z.string()),
